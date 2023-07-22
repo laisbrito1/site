@@ -1,0 +1,422 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui;
+}
+
+body{
+    width: 100%;
+    min-height: 100vh;
+    
+    background-color: rgb(30, 6, 53);
+}
+section{
+    width: 100%;
+    position: relative
+}
+.navbar{
+    width: 100%;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    padding: 1.2vw 6vw;
+    z-index: 1000;
+    background-color: rgb(30, 6, 53);
+}
+#logo{
+    font-size: 3vw;
+    color: white;
+    font-weight: 800;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
+.menuitems{
+    display: flex;
+    margin: auto 0;
+}
+.menuitems li{
+    list-style: none;
+    margin: 0 1.5vw;
+}
+.menuitems li a {
+    display: block;
+    color: white;
+    font-size: 1.5vw;
+    letter-spacing: 4px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+.menuitems li:hover a{
+    color: rgb(32, 25, 37)
+}
+/* The switch - the box around the slider */
+.switch {
+  font-size: 17px;
+  position: relative;
+  display: inline-block;
+  width: 3.5em;
+  height: 2em;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  --background: #28096b;
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--background);
+  transition: .5s;
+  border-radius: 30px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 1.4em;
+  width: 1.4em;
+  border-radius: 50%;
+  left: 10%;
+  bottom: 15%;
+  box-shadow: inset 8px -4px 0px 0px #fff000;
+  background: var(--background);
+  transition: .5s;
+}
+
+input:checked + .slider {
+  background-color: #522ba7;
+}
+
+input:checked + .slider:before {
+  transform: translateX(100%);
+  box-shadow: inset 15px -4px 0px 15px #fff000;
+}
+a{
+  color: white;
+  
+    text-decoration: none;
+    text-transform: uppercase;
+}
+.container{
+    display: flex;
+    width: 100%;
+    min-height: 85vh;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.text_container {
+  margin-top: 10vw;
+    width: 60%;
+    padding-left: 5rem;
+    padding-top: 5rem;
+}
+
+
+.text_container h2{
+    font-size: 10vw;
+    font-weight: 900;
+    line-height: 10vw;
+    text-transform: capitalize;
+    color: transparent;
+    background-image: linear-gradient(90deg, #5f94ff 20%, #ff48fb 40%, rgb(221, 18, 194) 60%);
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+.text_container h2::first-line{
+    letter-spacing: 5px;
+    color: white;
+}
+p,h5{
+  color: white;
+}
+h5{
+    font-size: 2vw;
+    margin-top: 20px;
+    text-transform: capitalize;
+    font-weight: 300;
+   
+}
+
+p{
+  font-size: 1vw;
+  color: white;
+  margin-top: 20px;
+}
+.cards{
+  width: 60%;
+  margin-top: 10vw;
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+
+  
+  .icon {
+    width: 100%;
+    height: 80px;
+    max-width: 80px;
+    background: linear-gradient(90deg, #5f94ff 0%, #ff48fb 40%, rgb(255, 255, 255) 60%);
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.8s ease;
+    background-position: 0px;
+    background-size: 200px;
+    margin-bottom: 200px;
+    margin-right: 25px;
+  }
+
+
+  
+  .icon:hover{
+    background-position: -120px;
+    transition: all 0.3s ease;
+  }
+  
+  .icon:hover svg path {
+   
+    transition: all 0.3s ease;
+  }
+
+.btn {
+  margin-right: 10px;
+  cursor: pointer;
+  width: 240px;
+  height: 50px;
+    --border-color: linear-gradient(-45deg, #ffae00, #7e03aa, #00fffb);
+    --border-width: .150em;
+    --curve-size: .5em;
+    --blur: 30px;
+    --bg: #080312;
+    --color: #afffff;
+    color: var(--color);
+      /* use position: relative; so that BG is only for .btn */
+    position: relative;
+    isolation: isolate;
+    display: inline-grid;
+    place-content: center;
+    padding: .5em 1.5em;
+    font-size: 17px;
+    border: 0;
+    text-transform: uppercase;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, .6);
+    clip-path: polygon(
+              /* Top-left */
+              0% var(--curve-size),
+  
+              var(--curve-size) 0,
+              /* top-right */
+              100% 0,
+              100% calc(100% - var(--curve-size)),
+  
+              /* bottom-right 1 */
+              calc(100% - var(--curve-size)) 100%,
+              /* bottom-right 2 */
+              0 100%);
+    transition: color 250ms;
+  }
+  
+  .btn::after,
+  .btn::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+  }
+  
+  .btn::before {
+    background: var(--border-color);
+    background-size: 300% 300%;
+    animation: move-bg7234 5s ease infinite;
+    z-index: -2;
+  }
+  
+  @keyframes move-bg7234 {
+    0% {
+      background-position: 31% 0%
+    }
+  
+    50% {
+      background-position: 70% 100%
+    }
+  
+    100% {
+      background-position: 31% 0%
+    }
+  }
+  
+  .btn::after {
+    background: var(--bg);
+    z-index: -1;
+    clip-path: polygon(
+              /* Top-left */
+              var(--border-width) 
+              calc(var(--curve-size) + var(--border-width) * .5),
+  
+              calc(var(--curve-size) + var(--border-width) * .5) var(--border-width),
+  
+              /* top-right */
+              calc(100% - var(--border-width)) 
+              var(--border-width),
+  
+              calc(100% - var(--border-width)) 
+              calc(100% - calc(var(--curve-size) + var(--border-width) * .5)),
+  
+              /* bottom-right 1 */
+              calc(100% - calc(var(--curve-size) + var(--border-width) * .5)) calc(100% - var(--border-width)),
+              /* bottom-right 2 */
+              var(--border-width) calc(100% - var(--border-width)));
+    transition: clip-path 500ms;
+  }
+  
+  .btn:where(:hover, :focus)::after {
+    clip-path: polygon(
+                  /* Top-left */
+                  calc(100% - var(--border-width)) 
+  
+                  calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5)),
+      
+                  calc(100% - var(--border-width))
+  
+                  var(--border-width),
+      
+                  /* top-right */
+                  calc(100% - var(--border-width))
+  
+                   var(--border-width),
+      
+                  calc(100% - var(--border-width)) 
+  
+                  calc(100% - calc(var(--curve-size) + var(--border-width) * .5)),
+      
+                  /* bottom-right 1 */
+                  calc(100% - calc(var(--curve-size) + var(--border-width) * .5)) 
+                  calc(100% - var(--border-width)),
+  
+                  /* bottom-right 2 */
+                  calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5))
+                  calc(100% - var(--border-width)));
+    transition: 200ms;
+  }
+  
+  .btn:where(:hover, :focus) {
+    color: #fff;
+  }
+
+
+/*animação titulo*/
+.glitch {
+    position: relative;
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #fff;
+    letter-spacing: 5px;
+    z-index: 1;
+    animation: shift 15s ease-in-out infinite alternate;
+  }
+  
+  .glitch:before,
+  .glitch:after {
+    display: block;
+    content: attr(data-glitch);
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.8;
+  }
+  
+  .glitch:before {
+    animation: glitch 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) both infinite;
+    color: #8b00ff;
+    z-index: -1;
+  }
+  
+  .glitch:after {
+    animation: glitch 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) reverse both infinite;
+    color: #e81cff;
+    z-index: -3;
+  }
+  
+  @keyframes glitch {
+    0% {
+      transform: translate(0);
+    }
+  
+    20% {
+      transform: translate(-3px, 3px);
+    }
+  
+    40% {
+      transform: translate(-3px, -3px);
+    }
+  
+  
+    to {
+      transform: translate(0);
+    }
+  }
+  
+  .card {
+    position: relative;
+    width: 300px;
+    height: 364px;
+    background-image: url("img/eu.jpg");
+    background-position-x: -2rem;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    margin-top: -10rem;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  
+  .card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    left: -5px;
+    margin: auto;
+    width: 310px;
+    height: 374px;
+    border-radius: 10px;
+    background: linear-gradient(-45deg, #e81cff 0%, #40c9ff 100% );
+    z-index: -10;
+    pointer-events: none;
+    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+  
+  .card::after {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(-45deg, #fc00ff 0%, #00dbde 100% );
+    transform: translate3d(0, 0, 0) scale(0.85);
+    filter: blur(20px);
+  }
+  
+  
+  .card:hover::after {
+    filter: blur(30px);
+  }
+  
+  .card:hover::before {
+    transform: rotate(-90deg) scaleX(1.2) scaleY(0.83);
+  }
+  
+  
